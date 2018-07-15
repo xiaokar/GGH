@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			.row.clearfix>.col-md-11>img{
+				width: 180px;
+				height: 60px;
+			}
+			
+			.nav.nav-tabs.top, .nav.nav-tabs.top>li>a{
+				border: 0;
+				margin-bottom: 20px;
+			}
+			/*.nav.nav-tabs.col-md-offset-2>li{
+				width: 200px;
+			}*/
+			.nav.nav-tabs.top>li>a {
+				font-family: "微软雅黑";
+				font-size: 19px;
+				font-weight: bold;
+			}
+			
+			.top>li{
+				width: 50%;
+			}
+			.nav.nav-tabs.top>li>a:hover {
+				color: orangered;
+			}
+			
+			.nav-tabs>.active>a{
+				color: orangered;
+			}
+			/*.line {
+				margin:10px 17px 0 17px;
+				width: 1px;
+				height: 30px;
+				
+			}*/
+			
+			
+			.orange {
+				background: orangered;
+				color: white;
+				font-family: "微软雅黑";
+			}
+			
+			.form-control {
+				height: 40px;
+			}
+			
+			.para {
+				margin-top: 20px;
+			}
+			
+			.para a {
+				color: orangered;
+			}
+			
+			.tab-pane>form>.form-group>p {
+				font-size: 12px;
+				color: red;
+				text-align: left;
+				display: none;
+			};
+			
+			.lined {
+				display: block;
+				background: #666;
+				height: 2px;
+				width: 100%;
+			}
+			
+			.shuru {
+				background: white;
+				
+				margin-top:40px;
+				height: 400px;
+			}
+			
+			.main {
+				width: 100%;
+				background-color: #fff;
+				height: 500px;
+				background: url(img/denglu.png);
+				background-size: cover;
+			}
+			
+			button {
+				width: 100%;
+			}
+			
+			ul>li>a {
+				text-align: center;
+			}
+			
+			p{
+				text-align: center;
+			}
+			
+			.form>.form-group>p {
+				float: left;
+			}
+				
+			
+			@media only screen and (max-width: 980px) {
+				
+				.nav.nav-tabs {
+					width: 100%;
+				} 
+				
+				button {
+					width: 100%;
+				}
+				
+				ul>li {
+					width: 50%;
+				}
+				
+				ul>li>a {
+					text-align: center;
+				}
+				
+				img.qrcoad {
+					display: block;
+					
+					margin: 0 auto;
+				}
+				
+				p{
+					text-align: center;
+				}
+			}
+			#cas {
+      position: absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      right:0;
+      margin:auto;
+      width:100%;
+      height:100%;
+      background-color: #0f3356;
+      z-index: -1;
+    }
+		</style>
+	</head>
+	<body>
+			<canvas id="cas"></canvas>
+		<div class="row clearfix logo">
+				<div class="col-md-1 column"></div>
+				<div class="col-md-11 column">
+					<img src="img/malllogo.png" />
+				</div>
+		
+		</div>
+		<div class="main">
+		<div class="container">
+		
+			<div class="row clearfix">
+				<div class="col-md-7 column"></div>
+				<div class="col-md-4 column shuru">
+					
+					
+					<div class="tabbable" id="tabs-731424">
+						<ul class="nav nav-tabs top">
+							<li class="active">
+								 <a href="#panel-208150" data-toggle="tab">账号登录</a>
+							</li>
+							
+							<li>
+								 <a href="#panel-382490" data-toggle="tab">扫码登录</a>
+							</li>
+						</ul>
+						<div class="tab-content ">
+							<div class="tab-pane active page1" id="panel-208150">
+								
+								<form role="form">
+									<div class="form-group ">
+										 <label for="exampleInputEmail1">用户名</label>
+										 <input type="text" class="form-control name" id="exampleInputEmail1" placeholder="输入123，否则报错！"/>
+										 <p id="name1">无此用户，请重新输入</p><p id="name2">用户名不能为空</p>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">用户密码</label>
+										<input type="password" class="form-control pass" id="exampleInputPassword1" placeholder="输入123，否则报错！"/>
+										<p id="pass1">密码错误，请重新输入</p><p id="pass2">密码不能为空</p>
+									</div>
+									
+									<div class="checkbox">
+										 <label><input type="checkbox" />记住密码</label>
+									</div> 
+									<button type="button" class="btn col-md-12 orange denglu">登录</button>
+								</form>
+								<div class="lined col-md-12"></div>
+						
+							</div>
+							
+							<div class="tab-pane" id="panel-382490">
+									<div class="col-md-2"></div>
+									<img src="img/qrcoad.png" class="col-md-8 qrcoad "/>
+									<div class="col-md-2"></div>
+									<div class="col-md-10 col-md-offset-1 para">
+										<p>使用<a>小米商城APP</a>扫一扫</p>
+			
+			
+										<p>小米手机可打开「设置」>「小米帐号」扫码登录</p>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				
+			</div>
+			<div class="col-md-1 column">
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.denglu').on("click",function(){
+			console.log(1);
+			var name = $('.name').val();
+			var pass = $('.pass').val();
+			if(name!="123"&&name!=""){
+				$('#name2').hide();
+				$('#name1').show();
+			}
+			if(pass!="123"&&name!=""){
+				$('#pass2').hide();
+				$('#pass1').show();
+			}
+			if(name=="123"&&pass=="123"){
+				$(location).attr('href', 'ggh.html');  
+			}
+			if(name == ""){
+				$('#name1').hide();
+				$('#name2').show();
+			}
+			if(pass==""){
+				$('#pass1').hide();
+				$('#pass2').show();
+			}
+		})
+		!function() {
+    var canvas = document.getElementById('cas');
+    var ctx = canvas.getContext('2d');
+    var rgb = '255';     
+    var extendDis = 5;   
+    var lineDis = 100;  
+    lineDis *= lineDis;
+    canvas.width = 800;
+    canvas.height = 600;
+    var RAF = (function() {
+      return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+            window.setTimeout(callback, 1000 / 60);
+          };
+    })();
+    var warea = {x: null, y: null};
+    window.onmousemove = function(e) {
+      e = e || window.event;
+      warea.x = e.clientX - canvas.offsetLeft;
+      warea.y = e.clientY - canvas.offsetTop;
+    };
+    window.onmouseout = function(e) {
+      warea.x = null;
+      warea.y = null;
+    };
+    var dots = [];
+    for (var i = 0; i < 150; i++) {
+      var x = Math.random() * (canvas.width + 2 * extendDis) - extendDis;
+      var y = Math.random() * (canvas.height + 2 * extendDis) - extendDis;
+      var xa = (Math.random() * 2 - 1) / 1.5;
+      var ya = (Math.random() * 2 - 1) / 1.5;
+      dots.push({
+        x: x,
+        y: y,
+        xa: xa,
+        ya: ya
+      })
+    }
+    setTimeout(function() {
+      animate();
+    }, 100);
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      bubDrawLine([warea].concat(dots));
+      RAF(animate);
+    }
+    /**
+     * 逐个对比连线
+     * @param ndots
+     */
+    function bubDrawLine(ndots) {
+      var ndot;
+      dots.forEach(function(dot) {
+        move(dot);
+        for (var i = 0; i < ndots.length; i++) {
+          ndot = ndots[i];
+          if (dot === ndot || ndot.x === null || ndot.y === null) continue;
+          var xc = dot.x - ndot.x;
+          var yc = dot.y - ndot.y;
+          if (xc > ndot.max || yc > lineDis) continue;
+          var dis = xc * xc + yc * yc;
+          if (dis > lineDis) continue;
+          var ratio;
+          if (ndot === warea && dis < 20000) {
+            dot.x -= xc * 0.01;
+            dot.y -= yc * 0.01;
+          }
+          ratio = (lineDis - dis) / lineDis;
+          ctx.beginPath();
+          ctx.lineWidth = ratio / 2;
+          ctx.strokeStyle = 'rgba(' + rgb + ', ' + rgb + ', ' + rgb + ', 1';
+          ctx.moveTo(dot.x, dot.y);
+          ctx.lineTo(ndot.x, ndot.y);
+          ctx.stroke();
+        }
+        ndots.splice(ndots.indexOf(dot), 1);
+      });
+    }
+    /**
+     * 粒子移动
+     * @param dot
+     */
+    function move(dot) {
+      dot.x += dot.xa;
+      dot.y += dot.ya;
+      dot.xa *= (dot.x > (canvas.width + extendDis) || dot.x < -extendDis) ? -1 : 1;
+      dot.ya *= (dot.y > (canvas.height + extendDis) || dot.y < -extendDis) ? -1 : 1;
+      ctx.fillStyle = 'rgba(' + rgb + ', ' + rgb + ', ' + rgb + ', 1';
+      ctx.fillRect(dot.x - 0.5, dot.y - 0.5, 1, 1);
+    }
+  }();
+	</script>
+	</body>
+</html>

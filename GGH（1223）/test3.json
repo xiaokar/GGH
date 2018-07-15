@@ -1,0 +1,60 @@
+{
+  "type": [
+    ["00", "小米手机"],
+    ["01", "红米"],
+    ["02", "笔记本"],
+    ["03", "电视"],
+    ["04", "盒子"],
+    ["05", "路由器"]
+  ],
+  "goods": {
+    "00": {
+      "小米max":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米max</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米max2":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米max2</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米max3":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米max3</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+    },
+    "01": {
+      "红米Note":
+        "<dl><dt><img src='img/huajired.jpg'/><p>红米Note</p></dt><dd><p id='text'>2质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "红米Note2":
+        "<dl><dt><img src='img/huajired.jpg'/><p>红米Note2</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "红米Note3":
+        "<dl><dt><img src='img/huajired.jpg'/><p>红米Note3</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+    },
+    "02": {
+      "小米笔记本":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米笔记本</p></dt><dd><p id='text'>3质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米笔记本2":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米笔记本2</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米笔记本3":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米笔记本3</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+    },
+    "03": {
+      "小米电视":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米电视</p></dt><dd><p id='text'>4质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米电视2":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米电视2</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米电视3":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米电视3</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+    },
+    "04": {
+      "小米盒子":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米盒子</p></dt><dd><p id='text'>5质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米盒子2":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米盒子2</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米盒子3":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米盒子3</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+    },
+    "05": {
+      "小米路由器":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米路由器</p></dt><dd><p id='text'>6质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米路由器2":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米路由器2</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>",
+        "小米路由器3":
+        "<dl><dt><img src='img/huajired.jpg'/><p>小米路由器3</p></dt><dd><p id='text'>1质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+    }
+  }
+}

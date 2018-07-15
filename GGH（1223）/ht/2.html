@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/links.css">
+</head>
+<body>
+        <div class="container-fluid contain">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                              订单管理
+                            </h4>
+                          </div>
+                          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                    <div class="col-md-12 sear">
+                                            <div class="fleft search">
+                                                <input type="text" class="form-control" placeholder="搜索">
+                                            </div>
+                                            <button type="submit" class="btn btn-info">查询</button>
+                                            <button type="button" class="btn pull-right btn-danger" data-toggle="modal" href='#myModal'>添加</button>
+                                        </div>
+                                        <div class="table-responsive table-bordered">
+                                                <table class="table table-hover table-bordered table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>订单编号</th>
+                                                            <th>订单名称</th>
+                                                            <th>订单总价</th>
+                                                            <th>订单数量</th>
+                                                            <th>详情</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="tbody">
+                                                        <tr>
+                                                            <td>1541316541378</td>
+                                                            <td>小米6 全网通版 4GB内存 亮蓝色 64GB</td>
+                                                            <td>2299元</td>
+                                                            <td>1</td>
+                                                            <td>
+                                                                <button class="btn btn-warning" data-toggle="modal" href='#myModal'>编辑</button>
+                                                                <button class="btn btn-primary">删除</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                          </div>
+                        </div>  
+         </div>
+         <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">操作商品</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#" method="POST" class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                            <label for="modal-number" class="col-sm-2 control-label">订单编号</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="modal-number" placeholder="订单编号">
+                                            </div>
+                                        </div>
+                                <div class="form-group">
+                                    <label for="modal-name" class="col-sm-2 control-label">订单名称</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="modal-name" placeholder="订单名称">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="modal-url" class="col-sm-2 control-label">订单总价</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="modal-url" placeholder="订单总价">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="modal-weight" class="col-sm-2 control-label">订单数量</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="modal-weight" placeholder="订单数量">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary">提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="./js/jquery.min.js"></script>
+            <script src="./js/bootstrap.min.js"></script>
+            <script>
+                $(function(){
+                    // 添加
+                    $(".panel-body").on("click",".btn-danger",function(){
+                        $("#modal-number").val("")
+                        $("#modal-name").val("")
+                        $("#modal-url").val("")
+                        $("#modal-weight").val("")
+
+                    })
+                    //取消
+                    $(".modal").on("click",".btn-default",function(){
+                        $(".modal").modal("hide")
+
+                    })
+                    //提交
+                    $(".modal").on("click",".btn-primary",function(){
+                        var tds=$("#myModal").data("tds")
+                        var num=$("#modal-number").val()
+                        var name=$("#modal-name").val()
+                        var url=$("#modal-url").val()
+                        var weight=$("#modal-weight").val()
+                        if(tds){
+                            tds.eq(0).text(num)
+                            tds.eq(1).text(name)
+                            tds.eq(2).text(url)
+                            tds.eq(3).text(weight)
+                            $("#myModal").removeData("tds")
+                        }else{
+                        var trr="<tr><td>"+num+"</td><td>"+name+"</td><td>"+url+"</td><td>"+weight+"<td>"+
+                             ' <button class="btn btn-warning" data-toggle="modal" href="#myModal">编辑</button>'+
+                               ' <button class="btn btn-primary">删除</button>'+
+                            '</td></tr>'
+                        $(".tbody").append(trr)
+                    }
+                    $(".modal").modal("hide")
+                    })
+                    // 编辑
+                    $(".panel-body").on("click",".btn-warning",function(){
+                       var tds=$(this).parent().parent().children()
+                        var num1=tds.eq(0).text()
+                        var name1=tds.eq(1).text()
+                        var url1=tds.eq(2).text()
+                        var weight1=tds.eq(3).text()
+                        $("#myModal").data({"tds":tds})
+                        $("#modal-number").val(num1)
+                        $("#modal-name").val(name1)
+                        $("#modal-url").val(url1)
+                        $("#modal-weight").val(weight1)
+                    })
+                    // 删除
+                    $(".panel-body").on("click",".btn-primary",function(){
+                        $(this).parent().parent().remove()
+                        // var i=1
+                        // $(".tbody tr").each(function(){
+                            
+                        //     $(this).children().eq(0).text(i)
+                        //     i++
+                        // })
+                    })
+                })
+               
+            </script>
+</body>
+</html>

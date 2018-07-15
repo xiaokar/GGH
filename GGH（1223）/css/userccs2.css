@@ -1,0 +1,20 @@
+.my-table-tool {
+    margin-bottom: 30px
+}
+.panel-info {
+border-color: #FFC107;
+}
+.panel a{color: #FF5722}
+.panel-info>.panel-heading {
+color: #FF5722;
+background-color: #ffd393;
+border-color: #FFC107;
+}
+.col-md-6{font-size: 25px;color: #ff5722;text-align:center;}
+.userbox{width: 172px;height: 55px;background: #ffd393;border-radius: 15px;line-height: 55px;margin: 10px auto}
+.btn-primary,.btn-info{background: #ffd393;border-color: #FFC107}
+.btn-primary:hover,.btn-info:hover{background: #FF5722;border-color: #FF5722}
+#sel1,#sel2{height: 300px}
+#eTable td{text-align: center;vertical-align: middle;}
+.theme select{width: 100px;margin-bottom: 50px}
+.panel{margin-top: 10px}

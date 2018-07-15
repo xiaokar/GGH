@@ -1,0 +1,44 @@
+[{
+    "num":"1456346454",
+    "img":" <img src='./img/max2.png' alt=''>",
+    "name":"小米max2",
+    "price":"￥2599",
+    "dect":"全网通版 4GB内存 亮蓝色 64GB",
+    "pr":"1099"
+},
+{
+    "num":"145612412",
+    "img":" <img src='./img/mi5x.png' alt=''>",
+    "name":"小米mi5x",
+    "price":"￥2699",
+    "dect":"全网通版 4GB内存 亮蓝色 64GB",
+    "pr":"1299"
+},
+{
+    "num":"1456124125",
+    "img":" <img src='./img/mi6.png' alt=''>",
+    "name":"小米mi6",
+    "price":"￥799",
+    "dect":"全网通版 4GB内存 亮蓝色 64GB",
+    "pr":"399"
+},
+{
+    "num":"1456346344",
+    "img":" <img src='./img/mix2.png' alt=''>",
+    "name":"小米mix2",
+    "price":"￥2899",
+    "dect":"全网通版 4GB内存 亮蓝色 64GB",
+    "pr":"899"
+},
+{
+    "num":"1456765868",
+    "img":" <img src='./img/note3.png' alt=''>",
+    "name":"小米note3",
+    "price":"￥3599",
+    "dect":"全网通版 4GB内存 亮蓝色 64GB",
+    "pr":"2099"
+}
+
+
+
+]

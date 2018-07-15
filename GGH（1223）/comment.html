@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/com.css">
+    <link rel="stylesheet" type="text/css" href="./css/summernote/summernote.css"></link>
+    <link rel="stylesheet" type="text/css" href="./css/summernote/summernote-bs3.css"></link>
+</head>
+
+<body>
+    <ol class="breadcrumb">
+        <li>
+            <a href="./goodlist.html">
+                <i class="fa fa-angle-left"></i>
+                <i class="fa fa-angle-left"></i> 返回</a>
+        </li>
+    </ol>
+    <div class="container-fluid">
+        <div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">商品评论</a>
+                </li>
+                <li role="presentation">
+                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">文章内容</a>
+                </li>
+                <li role="presentation">
+                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">关联商品</a>
+                </li>
+                <!--<li role="presentation"><a href="#comm" aria-controls="comm" role="tab" data-toggle="tab">商品评论</a></li>-->
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <select id="type" class="form-control" require="require"></select>
+                            <select id="goods" class="form-control" require="require" multiple=""></select>
+                        </div>
+                        <div class=" col-md-8">
+                            <div class="show">
+                            </div>
+                        </div>
+                    </div>
+                    <!--<form action="" method="POST" class="form-horizontal" role="form">
+                              <div class="form-group">
+                                   <label for="title">
+                                     文章标题
+                                   </label>
+                                   <input type="text" id="title" placeholder="文章标题">
+                                  </div> <div class="form-group">
+                                    <label for="autor">
+                                      文章作者
+                                    </label>
+                                    <input type="text" id="autor">
+                                   </div>
+                                   <div class="form-group">
+                                    <label for="email">
+                                      作者email
+                                    </label>
+                                    <input type="text" id="email">
+                                   </div>
+                                   <div class="form-group">
+                                    <label for="main">
+                                      关键字
+                                    </label>
+                                    <input type="text" id="main">
+                                   </div>
+                                   <div class="form-group">
+                                    <label for="text">
+                                      网页描述
+                                    </label>
+                                    <textarea name="" id="text" cols="30" rows="10"></textarea>
+                                   </div><div class="form-group">
+                                    <label for="file">
+                                      上传文件
+                                    </label>
+                                    <input type="file" class="filein" id="file">
+                                   </div>
+                                   <div class="form-group">
+                                    <label for="add">
+                                      或输入文件地址
+                                    </label>
+                                    <input type="text" id="add">
+                                   </div>
+                                   <div class="bt">
+                                    <button class="btn btn-primary">确定</button>
+                                    <button class="btn btn-primary">重置</button></div>
+                              </form>-->
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+
+                    <body>
+                        <div id="summernote">这是summernote </div>
+                        <button class="btn btn-primary">发布评论</button>
+                    </body>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                    <div class="row">
+                        <div class="form-group col-md-4 col-xs-12">
+                        	<p style="text-align: center"><b>上架商品</b></p>
+                            <select name="" id="true" class="form-control secl1" require="require" multiple>
+                                <option value="1">01 小米mix</option>
+                                <option value="2">02 小米mi5x</option>
+                                <option value="3">03 小米mi6</option>
+                                <option value="4">04 小米note3</option>
+                                <option value="5">05 小米mix2</option>
+                            </select>
+                        </div>
+                        <div class="btn-group-vertical col-md-2 col-xs-12 bt-hook" role="group" aria-label="...">
+                            <button type="button" class="btn btn-primary">>>>></button>
+                            <button type="button" class="btn btn-primary">
+                                <<<<</button>
+                                    <button type="button" class="btn btn-primary">></button>
+                                    <button type="button" class="btn btn-primary">
+                                        <</button>
+                        </div>
+                        <div class="form-group col-md-4 col-xs-12">
+                        	<p style="text-align: center"><b>下架商品</b></p>
+                            <select name="" id="false" class="form-control secl2" require="require" multiple>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="comm">
+
+                </div>
+            </div>
+
+        </div>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./css/summernote/summernote.min.js"></script>
+        <script src="./css/summernote/summernote-zh-CN.js"></script>
+        <script>
+            $(document).ready(function () {
+                        var comData = []
+                        var comGood = []
+                        $('#summernote').summernote({
+                            height: 400,
+                            minHeight: 300,
+                            maxHeight: 500,
+                            focus: true,
+                            lang: 'zh-CN',
+                            // 重写图片上传  
+                            onImageUpload: function (files, editor, $editable) {
+                                sendFile(files[0], editor, $editable);
+                            }
+                        });
+                        $.ajax({
+                            url: "./test3.json",
+                            type: "GET",
+                            success: function (data, textStatus, jqXHR) {
+                                comData = data.type
+                                comGood = data.goods
+                                for (let i = 0; i < comData.length; i++) {
+                                    $("#type").append("<option value='" + comData[i][0] + "'>0" + (i + 1) +
+                                        " " + comData[i][1] + "</option>")
+                                }
+                                for (key in comGood[$("#type").val()]) {
+                                    var j = 0
+                                    $("#goods").append("<option value='" + key + "'>0" + (j + 1) + " " + key + "</option>")
+                                    $(".show").html(comGood[$("#type").val()][$("#goods").val()])
+                                    $('.show>dl>.delect').on("click", function () {
+                                        $(this).parent().remove();
+
+                                    })
+                                }
+                            }
+                        })
+                        $("#type").change(function () {
+                            $("#goods").html("")
+                            $(".show").html("")
+                            for (key in comGood[$("#type").val()]) {
+                                var j = 0
+                                $("#goods").append("<option value='" + key + "'>0" + (j + 1) + " " + key + "</option>")
+                                sch()
+                            }
+                        });
+                        $("#goods").change(function(){
+                           sch()
+                        
+                        })
+                        function sch(){
+                            $(".show").html(comGood[$("#type").val()][$("#goods").val()])
+                                $('.show>dl>.delect').on("click", function () {
+                                    $(this).parent().remove();
+                                })
+                        }
+                        //图片上传  
+                        function sendFile(file, editor, $editable) {
+
+                            var filename = false;
+                            try {
+                                filename = file['name'];
+                            } catch (e) {
+                                filename = false;
+                            }
+                            if (!filename) {
+                                $(".note-alarm").remove();
+                            }
+
+                            //以上防止在图片在编辑器内拖拽引发第二次上传导致的提示错误  
+                            data = new FormData();
+                            data.append("file", file);
+                            data.append("key", filename); //唯一性参数  
+
+                            $.ajax({
+                                data: data,
+                                type: "POST",
+                                url: "",
+                                cache: false,
+                                contentType: false,
+                                processData: false,
+                                success: function (url) {
+                                    if (url == '200') {
+                                        alert("上传失败！");
+                                        return;
+                                    } else {
+                                        alert("上传成功！");
+                                    }
+                                    //alert(url);  
+                                    editor.insertImage($editable, url);
+                                },
+                                error: function () {
+                                    alert("上传失败！");
+                                    return;
+                                }
+                            });
+                            var text = "${text}";
+                            $('#summernote').code(text);
+                            var str = $('#summernote').code();
+
+                        }
+                        $(".bt-hook").children().eq(0).on("click", function () {
+                            sele1('.secl2', ".secl1")
+                        })
+                        $(".bt-hook").children().eq(1).on("click", function () {
+                            sele1('.secl1', ".secl2")
+                        })
+                        $(".bt-hook").children().eq(2).on("click", function () {
+                                sele('.secl2', ".secl1")
+                            }
+
+                        )
+                        $(".bt-hook").children().eq(3).on("click", function () {
+                            sele('.secl1', ".secl2")
+                        })
+
+                        function sele1(a1, b1) {
+                            $(a1).append($(b1).find("option"))
+                            $(a1 + " option").attr({
+                                selected: false
+                            })
+                            var arr = $(a1).children().sort(function (a, b) {
+                                return a.value - b.value
+                            })
+                            $(a1).html(arr)
+                        }
+
+                        function sele(a1, b1) {
+                            $(a1).append($(b1).find("option:selected"))
+                            $(a1 + " option").attr({
+                                selected: false
+                            })
+                            var arr = $(a1).children().sort(function (a, b) {
+                                return a.value - b.value
+                            })
+                            $(a1).html(arr)
+                        }
+                    })
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>广告管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+  @media (min-width: 768px) {
+    .table-responsive>.table-bordered{
+        border: 0;
+    }
+    .table-responsive>.table-bordered>tbody>tr:last-child>td{
+        border-bottom: 0; 
+    }
+    
+    .panel.panel-success {
+    	margin-top: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .btn{font-size: 10px;}
+    
+}
+    .table{
+        margin-bottom: 0;
+    }
+    .my-table-tool {
+        margin-bottom: 30px
+    }
+    /*
+    .table.table-striped {
+        display: none;
+    }*/
+
+    .table.table-striped thead tr th{
+        text-align: center;
+        font-family: "微软雅黑";
+    }
+    .table.table-striped tbody tr td{
+        text-align: center;
+    }
+
+
+    .table-responsive table tbody tr td {
+        
+        line-height: 35px;
+    }
+
+    .table-responsive table tbody tr td .min {
+        width: 40px;
+        height: 25px;
+    }
+
+    .table-responsive table tbody tr td .max{
+        width: 240px;
+        height: 150px;
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        display: none;
+    }
+    
+    .panel-heading {
+    	background:  rgb(255,103,0);
+    }
+
+    td>p {
+        display:none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 main">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">广告管理</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row my-table-tool">
+                            <div class="col-md-12">
+                                <div style="float:left">
+                                    <!--<input type="text" class="form-control" placeholder="搜索">-->
+                                </div>
+                               <!-- <button type="submit" class="btn btn-primary">查找</button>-->
+                                <button type="button" class="btn pull-right btn-success" data-toggle="modal" href='#myModal'><b class="glyphicon glyphicon-plus"></b>广告添加</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive table-bordered">
+                            <table class="table table-hover table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>广告名称</th>
+                                        <th>缩略图</th>
+                                        <th>广告位名称</th>
+                                        <th>媒介类型</th>
+                                        <th>开始日期</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">编辑内容</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST" class="form-horizontal" role="form">
+                     
+                        <div class="form-group">
+                            <label for="modal-url" class="col-sm-2 control-label">广告名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-name" placeholder="请输入广告名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-weight" class="col-sm-2 control-label">缩略图</label>
+                            <div class="col-sm-10">
+                                <input type="file" class="form-control" id="modal-src" placeholder="请输入图片名" style="border: 0">
+                               <!--  <input type="file" id="file" value="" /><button id="c">123</button> -->
+                               <!--  <input type="button" value="上传" onclick="checkFile()"/> -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-weight" class="col-sm-2 control-label">广告位名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-adname" placeholder="请输入广告位名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-weight" class="col-sm-2 control-label">媒介类型</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-type" placeholder="请输入媒介类型">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-weight" class="col-sm-2 control-label">开始日期</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" id="modal-number" placeholder="请输入开始日期">
+                            </div>
+                        </div>                      
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-success">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <!--  <img src="img/box/box3c.png" alt=""> -->
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    
+   
+
+    $(document).ready(function() {
+    	var a = true;
+    	var mouseX,mouseY;
+    	window.onmousemove = function(e) {//big photo
+    		mouseX = e.clientX;
+    		mouseY = e.clientY;
+    	}
+
+
+	    $('tbody').on("mouseover","td>.min",function () {
+	    	//console.log(mouseX,mouseY);
+	    	
+	    	var index = $(this).parent().parent().index();
+	    	//console.log(index);
+	    		if(a===true){
+	    		$('td>.max').eq(index).show();
+	    		$('td>.max').eq(index).css({"top":mouseY-140,"left":mouseX+30})
+	    		a = false;
+	    	}
+	    })
+    	
+    	$('tbody').on("mouseout","td>.min",function () {
+	    	
+	    	
+	    	var index = $(this).parent().parent().index();
+	    	//console.log(index);
+	    		a = true;
+	    		$('td>.max').eq(index).hide();
+	    		
+	    	
+	    })
+    	
+    	
+    	$('tbody').on('click', 'td>.btn-success', function() {
+    		var name = $(this).parent().parent().children().eq(3).html();
+    		$(this).page = name; 
+    		//console.log(name)
+    		$(location).attr('href', 'advertisement/'+ name+'.html');  
+    		
+    	})
+    	
+    	
+        $('tbody').on('click', 'td>.btn-danger', function() {
+            $(this).parent().parent().remove();
+            console.log( $('tbody').children().length)
+            if( $('tbody').children().length !== 0){
+            	$('tbody').children().each(function(index, el) {
+            		console.log(index,el)
+            		$(el).children().eq(0).text(index+1)
+            	});
+            }
+            // else{
+            //     $('tbody').parent().hide();
+            // }
+        })
+        $('tbody').on('click', 'td>.btn-warning', function() {//yellow编辑
+            $('#myModal').modal('show');
+            var tds = $(this).parent().parent().children();
+            console.log(tds)
+            var num = tds.eq(0).text();
+            var name = tds.eq(1).text();
+            var src = tds.eq(2).children().find('p').text();
+            console.log(src);
+            var adname = tds.eq(3).text();
+            var type = tds.eq(4).text();
+            var number = tds.eq(5).text();
+            
+            $('#modal-num').val(num)
+            $('#modal-name').val(name)
+            $('#modal-src').get(0).files[0].name = src;
+            $('#modal-adname').val(adname);
+            $('#modal-type').val(type);
+            $('#modal-number').val(number)
+            $('#myModal').data({ 'tds': tds }) //数据存储
+        });
+
+        $('.modal-footer>.btn-success').click(function() {//green增加
+            $("#myModal").modal('hide')
+            var name = $('#modal-name').val();
+            var src = $('#modal-src').get(0).files[0].name;
+            console.log(src)
+            var adname = $('#modal-adname').val();
+            var number = $('#modal-number').val();
+            var type = $('#modal-type').val();
+            // var remain = $('#modal-remain').val();
+            var tds = $("#myModal").data('tds') //get
+            console.log(tds)
+
+            if (tds === undefined) {
+                var trCreate = document.createElement("tr");
+                $(trCreate).append('<td>' + ($('tbody tr').length + 1) + '</td>');
+                $(trCreate).append('<td>' + name + '</td>');
+                $(trCreate).append("<td><img class='min' src='img/" + src + "' /><img class='max' src='img/"+src +"' /><p>"+src+"</p></td>");
+                $(trCreate).append("<td>" + adname + "</td>");
+                $(trCreate).append('<td>' + type + '</td>');
+                $(trCreate).append('<td>' + number + '</td>');
+                $(trCreate).append(`<td>
+                                        <button class="btn btn-warning">编辑</button>
+                                        <button class="btn btn-danger">删除</button>
+                                        <button class="btn btn-success adv">详情</button>
+                                    </td>`);
+                $('tbody').append(trCreate)
+
+            } else {
+                
+                tds.eq(1).text(name)
+                tds.eq(2).html("<img class='min' src='img/" + src +"' /><img class='max' src='img/" + src+ "' /><p>"+src+"</p>");
+                tds.eq(3).text(adname)
+                tds.eq(4).text(type)
+                tds.eq(5).text(number)
+                $("#myModal").removeData('tds')
+            }
+        });
+
+        $('.my-table-tool .btn-danger').click(function() {
+        	$('#myModal :input').val('')
+        });
+
+
+//         function checkFile(){
+//         var str1=document.getElementById("file").value;
+//         var str2=str1.substring(str1.lastIndexOf(".")+1);
+//         str2=str2.toUpperCase();
+//         if(str2!="BMP"&&str2!="JPG"&&str2!="PNG"&&str2!="GIF")
+//         alert("上传失败(文件类型必须为BMP、JPG、PNG、GIF格式)");
+//         else
+//         alert("上传成功");
+// }
+
+
+    });
+    </script>
+</body>
+
+</html>

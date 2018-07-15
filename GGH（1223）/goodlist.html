@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="./css/links.css">
+    <style>
+    	.container-fluid {
+		margin-top: 10px;
+	}
+    </style>
+</head>
+<body>
+   
+    <div class="container-fluid contain">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      商品管理
+                    </h4>
+                  </div>
+                 <div class="panel-body">
+                       <div class="btn-group" id="toolBar" role = "group">
+                       	 <button type="button" id="btn_add" class="btn btn-outline btn-default"><i class="glyphicon glyphicon-plus"></i></button>
+                       	
+                       </div>
+
+                       <table id="oTable" data-height="600">
+                       	<thead>
+                       		<tr>
+                       			<th data-field = "num">商品序号</th>
+                                   <th data-field = "img">商品图片</th>
+                                   <th data-field = "name">商品名称</th>
+                                   <th data-field = "price">商品价格</th>
+                                   <th data-field = "dect">商品简介</th>
+                                   <th data-field = "pr">成本价</th>
+                                   
+                       			<th data-field = "operate" data-formatter = "operateFormatter" data-events = "operateEvents">操作</th>
+                       		</tr>
+                       	</thead>
+                       </table>
+                    </div>
+                    
+ </div>
+ <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">操作商品</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                    <label for="modal-num" class="col-sm-2 control-label">商品序号</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="modal-num" placeholder="商品序号">
+                                    </div>
+                                </div>
+                        <div class="form-group">
+                            <label for="modal-img" class="col-sm-2 control-label">商品图片</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-img" placeholder="商品图片">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-name" class="col-sm-2 control-label">商品名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-name" placeholder="商品名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-price" class="col-sm-2 control-label">商品价格</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-price" placeholder="商品价格">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-dec" class="col-sm-2 control-label">商品简介</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-dec" placeholder="商品简介">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-pr" class="col-sm-2 control-label">成本价</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-pr" placeholder="成本价">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">提交</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./css/table/bootstrap-table.min.js"></script>
+    <script src="./css/table/bootstrap-table-zh-CN.js"></script>
+    <script>
+     $("#oTable").bootstrapTable({
+    	url:"./test1.json",
+    	search: true,
+    	pagination: true,
+    	showRefresh: true,
+    	showToggle: true,
+    	showColumns: true,
+    	toolbar: '#toolBar'
+    })
+   
+    $("#btn_trash").on("click",function(){
+        $("#oTable").find('tr.selected').remove()
+    })
+    $("#btn_add").on("click",function(){
+        $("#myModal").modal("show")
+        $(".form-control").each(function(){
+            $(this).val("")
+        })
+    })
+    $(".modal").on("click",".btn-primary",function(){
+        
+            var tds=$("#myModal").data("tds")
+                        var num=$("#modal-num").val()
+                        var img=$("#modal-img").val()
+                        var name=$("#modal-name").val()
+                        var price=$("#modal-price").val()
+                        var dec=$("#modal-dec").val()
+                        var pr=$("#modal-pr").val()
+                        if(tds){
+                            tds.eq(0).text(num)
+                            tds.eq(1).html('<img src="./img/'+img+'.png" alt="">')
+                            tds.eq(2).text(name)
+                            tds.eq(3).text(price)
+                            tds.eq(4).text(dec)
+                            tds.eq(5).text(pr)
+                            $("#myModal").removeData("tds")
+                        }else{
+                            var trr='<tr data-index="0"> <td style="">'+num+'</td> <td style=""> <img src="./img/'+img+'.png" alt=""></td>' +
+                            '<td style="">'+name+'</td> <td style="">￥'+price+'</td> <td style="">'+dec+'</td> <td style="">'+pr+'</td> <td style="">'+
+                            '<button class="btn btn-warning edit">编辑</button><button class="btn btn-primary remove">删除</button></td> </tr>'
+                       
+                        $("tbody").append(trr)
+                    }
+                    $(".modal").modal("hide")
+                    })
+    function operateFormatter(value, row, index){
+    	return [
+    	'<button class="btn btn-warning edit">编辑</button>',
+    	'<button class="btn btn-primary remove">删除</button>',
+        '<button class="btn btn-success remove"><a href="./comment.html" style="textDecoration: none;color:#fff">评论</a></button>'
+    
+    	].join('')
+    }
+    $("#oTable").on('click-row.bs.table', function (e, row, element) {
+    	$(".success").removeClass('success')
+    	$(element).addClass('success')
+    })
+    
+    $(".panel-body").on("click",".btn-warning",function(){
+        $("#myModal").modal("show")
+                       var tds=$(this).parent().parent().children()
+                        var num1=tds.eq(0).text()
+                        // var img1=tds.eq(1).html()
+                        var name1=tds.eq(2).text()
+                        var price1=tds.eq(3).text()
+                        var dec1=tds.eq(4).text()
+                        var pr1=tds.eq(5).text()
+                        $("#myModal").data({"tds":tds})
+                        $("#modal-num").val(num1)
+                        $("#modal-img").val(name1+".png")
+                        $("#modal-name").val(name1)
+                        $("#modal-price").val(price1)
+                        $("#modal-dec").val(dec1)
+                        $("#modal-pr").val(pr1)
+                    })
+                    // 删除
+    $(".panel-body").on("click",".btn-primary",function(){
+        $(this).parent().parent().remove()
+        
+    })
+    $("#oTable tbody").on("mouseover","tr img",function(e){
+        var src=e.target.src
+        var img=document.createElement("img")
+        $(img).attr("src",src)
+        $(img).css({
+            "width":160+"px",
+            "height":110+"px",
+            "position":"absolute",
+            "left":100+"px",
+            "zIndex":20
+        })
+        $(this).parent().append(img)
+    })
+    $("#oTable tbody").on("mouseout","tr img",function(e){
+       $(this).parent().children().eq(1).remove()
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿
+[
+   {
+	"userimg": "<img src = './img/1.PNG' width = '50'>",
+	"id": 1,
+        "name": "YZQ",
+        "pwd": "123",
+        "sex": "男",
+        "tel": "237471747",
+	"addr": "广东省广州市",
+	"cl": "皇冠用户"
+    },{
+	"userimg": "<img src = './img/1.PNG' width = '50'>",
+		"id": 2,
+        "name": "Sara",
+        "pwd": "244",
+        "sex": "女",
+        "tel": "23712747",
+	"addr": "广东省湛江市",
+	"cl": "钻石用户"
+    },{
+	"userimg": "<img src = './img/1.PNG' width = '50'>",
+		"id": 3,
+        "name": "hhh",
+        "pwd": "ww324",
+        "sex": "男",
+        "tel": "547471747",
+	"addr": "广东省茂名市",
+	"cl": "星级用户"
+    },{
+	"userimg": "<img src = './img/2.PNG' width = '50'>",
+		"id": 4,
+        "name": "gdf",
+        "pwd": "wwe4",
+        "sex": "男",
+        "tel": "5411747",
+	"addr": "广东省阳江市",
+	"cl": "黑名单用户"
+    },{
+	"userimg": "<img src = './img/2.PNG' width = '50'>",
+		"id": 5,
+        "name": "gfhh",
+        "pwd": "ww324",
+        "sex": "男",
+        "tel": "5341747",
+	"addr": "广东省肇庆市",
+	"cl": "普通用户"
+    },{
+	"userimg": "<img src = './img/2.PNG' width = '50'>",
+		"id": 6,
+        "name": "jyj",
+        "pwd": "ww324",
+        "sex": "男",
+        "tel": "5343247",
+	"addr": "广东省韶关市",
+	"cl": "星级用户"
+    },{
+	"userimg": "<img src = './img/1.PNG' width = '50'>",
+		"id": 7,
+        "name": "htr",
+        "pwd": "ww324",
+        "sex": "男",
+        "tel": "3542356467",
+	"addr": "广东省广州市",
+	"cl": "钻石用户"
+    },{
+	"userimg": "<img src = './img/1.PNG' width = '50'>",
+		"id": 8,
+        "name": "kuyk",
+        "pwd": "ww324",
+        "sex": "男",
+        "tel": "547471747",
+	"addr": "广东省广州市",
+	"cl": "黑名单用户"
+    },{
+	"userimg": "<img src = './img/1.PNG' width = '50'>",
+		"id": 9,
+        "name": "grg",
+        "pwd": "ww324",
+        "sex": "男",
+        "tel": "547471747",
+	"addr": "广东省广州市",
+	"cl": "普通用户"
+    },{
+	"userimg": "<img src = './img/1.PNG' width = '50'>",
+		"id": 10,
+        "name": "errq",
+        "pwd": "ww324",
+        "sex": "男",
+        "tel": "547471747",
+	"addr": "广东省广州市",
+	"cl": "钻石用户"
+    },{
+	"userimg": "<img src = './img/1.PNG' width = '50'>",
+		"id": 11,
+        "name": "gdh",
+        "pwd": "ww324",
+        "sex": "男",
+        "tel": "547471747",
+	"addr": "广东省广州市",
+	"cl": "星级用户"
+    },{
+	"userimg": "<img src = './img/1.PNG' width = '50'>",
+		"id": 12,
+        "name": "rew",
+        "pwd": "ww324",
+        "sex": "男",
+        "tel": "547471747",
+	"addr": "广东省广州市",
+	"cl": "钻石用户"
+    }
+]

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/table/bootstrap-table.min.css">
+    <link rel="stylesheet" href="fontawesome/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+    .my-table-tool {
+        margin-bottom: 30px
+    }
+    .panel-info {
+    border-color: #FFC107;
+	}
+	.panel a{color: #FF5722}
+    .panel-info>.panel-heading {
+    color: #FF5722;
+    background-color: #ffd393;
+    border-color: #FFC107;
+	}
+    .col-md-6{font-size: 25px;color: #ff5722;text-align:center;}
+    .userbox{width: 172px;height: 55px;background: #ffd393;border-radius: 15px;line-height: 55px;margin: 10px auto}
+	.btn-primary,.btn-info{background: #ffd393;border-color: #FFC107}
+	.btn-primary:hover,.btn-info:hover{background: #FF5722;border-color: #FF5722}
+    #sel1,#sel2{height: 300px}
+    #eTable td{text-align: center;vertical-align: middle;}
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 main">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">用户管理</h3>
+                    </div>
+                    <ul class="breadcrumb">
+            			<li><a href="index.html">主页</a></li>
+            			<li class="active" style="color:#ffd393">用户管理</li>
+        			</ul>
+        			<div class="panel col-md-12">
+                        <div class="col-md-6">
+                        <div class="userbox">
+        				<p><i class="fa fa-user"></i>用户总数 <span class="badge" id="count"></span><p>
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="userbox">
+        				<p><i class="fa fa-user-plus"></i>新用户 <span class="badge" id="count2">3</span><p>
+                        </div>
+                        </div>
+        				
+        			</div>
+                    <div class="panel col-md-12">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#home" data-toggle="tab">资料编辑</a></li>
+                        <li><a href="#profile" data-toggle="tab">级别设置</a></li>
+                        <li><a href="#blacklist" data-toggle="tab">黑名单管理</a></li>
+                    </ul>
+                    </div>
+                    <div class="panel-body tab-content">
+                    <div class="tab-pane active" id="home">
+                       <div class="btn-group" id="toolBar" role = "group">
+                       	 <button type="button" id="btn_add" class="btn btn-outline btn-default"><i class="glyphicon glyphicon-plus"></i></button>
+                       	 
+                       	 <button type="button" id="btn_trash" class="btn btn-outline btn-default"><i class="glyphicon glyphicon-trash"></i></button>
+                       </div>
+
+                       <table id="eTable" data-height="800">
+                       	<thead>
+                       		<tr>
+                       			<th data-field = "state" data-checkbox = "true"></th>
+                                <th data-field = "userimg">头像</th>
+                       			<th data-field = "id">用户ID</th>
+                       			<th data-field = "name">用户名</th>
+                       			<th data-field = "pwd">密码</th>
+                       			<th data-field = "sex">性别</th>
+                       			<th data-field = "tel">联系电话</th>
+                                <th data-field = "addr">收货地址</th>
+                                <th data-field = "cl">用户级别</th>
+                       			<th data-field = "operate" data-formatter = "operateFormatter" data-events = "operateEvents">操作</th>
+                       		</tr>
+                       	</thead>
+                       </table>
+                    </div>
+                        <div class="tab-pane" id="profile">
+                        <form style="width:500px;margin:0 auto">
+                          <div class="form-group">
+                            <label>用户ID</label>
+                            <input type="number" class="form-control" id="id" placeholder="输入ID">
+                          </div>
+                          <div class="form-group">
+                            <label>用户名</label>
+                            <input type="text" class="form-control" id="name" placeholder="输入名字">
+                          </div>
+                          <div class="form-group">
+                            <label>选择用户级别：</label>
+                            <select class="form-control">
+                              <option>皇冠用户</option>
+                              <option>钻石用户</option>
+                              <option>星级用户</option>
+                              <option>普通用户</option>
+                              <option>黑名单</option>
+                            </select>
+                            <p class="help-block">设置不同级别的用户</p>
+                          </div>
+                          
+                          <button type="submit" class="btn btn-danger" id="btn1">确定</button>
+                          
+                        </form>
+                        </div>
+                        <div class="tab-pane" id="blacklist">
+                            <div class="panel-body">
+                                <form action="" method="POST" class="form-horizontal" role="form">
+                                    <div class="form-group">
+                                        <legend>黑名单管理</legend>
+                                    </div>
+                                    <div class="col-sm-12">
+                                    <div class="form-group col-sm-4">
+                                        <p style="text-align:center">正常用户</p>
+                                        <select name="aaa" id="sel1" class="form-control" required="required" multiple="multiple" style="text-align:center">
+                                            <option value="0">ID:1 &nbsp;&nbsp;用户名:YZQ</option>
+                                            <option value="1">ID:2 &nbsp;&nbsp;用户名:DWW</option>
+                                            
+                                            <option value="3">ID:4 &nbsp;&nbsp;用户名:QWE</option>
+                                            <option value="4">ID:5 &nbsp;&nbsp;用户名:GDF</option>
+                                            
+                                            <option value="6">ID:7 &nbsp;&nbsp;用户名:RFD</option>
+                                            <option value="7">ID:8 &nbsp;&nbsp;用户名:CVD</option>
+                                            <option value="8">ID:9 &nbsp;&nbsp;用户名:WSD</option>
+                                            <option value="9">ID:10 &nbsp;&nbsp;用户名:HSA</option>
+                                            <option value="10">ID:11 &nbsp;&nbsp;用户名:ADW</option>
+                                            <option value="11">ID:12 &nbsp;&nbsp;用户名:EWQ</option>
+                                        </select>
+                                    
+                                    </div>
+                                    <div class="col-sm-2 controls" style="margin-top: 30px">
+                                        <input type="button" class="btn btn-info btn-block" value="全部移出>>>">
+                                        <input type="button" class="btn btn-info btn-block" value="<<<全部移出">
+                                        <input type="button" class="btn btn-info btn-block" value="移出>">
+                                        <input type="button" class="btn btn-info btn-block" value="<移出">
+                                    </div>
+
+                                    <div class="form-group col-sm-4">
+                                        <p style="text-align:center">黑名单用户</p>
+                                        <select name="bbb" id="sel2" class="form-control" required="required" multiple="multiple">
+                                            <option value="2">ID:3 &nbsp;&nbsp;用户名:GFF</option>
+                                            <option value="5">ID:6 &nbsp;&nbsp;用户名:ADD</option>
+                                        </select>
+                                    
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">操作</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST" class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="modal-userimg" class="col-sm-2 control-label">头像</label>
+                            <div class="col-sm-10">
+                                <input type="file" class="form-control" id="modal-userimg" placeholder="头像">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-id" class="col-sm-2 control-label">用户ID</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="modal-id" placeholder="用户ID">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-name" class="col-sm-2 control-label">用户名</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-name" placeholder="用户名">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-pwd" class="col-sm-2 control-label">密码</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="modal-pwd" placeholder="密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-sex" class="col-sm-2 control-label">性别</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-sex" placeholder="性别">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-tel" class="col-sm-2 control-label">联系电话</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="modal-tel" placeholder="联系电话">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-addr" class="col-sm-2 control-label">收货地址</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-addr" placeholder="收货地址">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-cl" class="col-sm-2 control-label">用户级别</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-cl" disabled="disabled">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-table.min.js"></script>
+	<script src="js/bootstrap-table-zh-CN.js"></script>
+    <script>
+    
+$(function() {
+    $("#eTable").bootstrapTable({
+    	url:"./user.json",
+    	search: true,
+    	pagination: true,
+    	showRefresh: true,
+    	showToggle: true,
+    	showColumns: true,
+    	toolbar: '#toolBar',
+        iconSize: 'outline',
+        icons: {
+            refresh: 'glyphicon-repeat',
+            toggle: 'glyphicon-list-alt',
+            columns: 'glyphicon-list'
+        }
+    })
+    
+    $('#eTable').on('load-success.bs.table', function(e, data) {
+        var img = document.createElement("img");
+        $('#eTable img').hover(function() {
+            $(this).parent().css('position', 'relative')
+            $(img).attr('src', $(this).attr('src'))
+            $(img).css('width', "100px");
+            $(img).attr({
+                'src': $(this).attr('src')
+            });
+            $(img).css({
+                'width': '100px',
+                'position': 'absolute',
+                'left': $(this).width(),
+                'top': '8px'
+            });
+            $(this).parent().append(img)
+        }, function() {
+            $(this).parent().children().last().remove()
+        });
+    })
+    // $('#eTable').
+    $('#eTable').on('load-success.bs.table',function(e,data){
+        var num1 = $('#eTable').bootstrapTable('getData').length
+        $("#count").text(num1)
+
+        $("#btn_trash").click(function(event) {
+        var ids = $.map($('#eTable').bootstrapTable('getSelections'), function (row) {
+            return row.id;
+        });
+        
+        $('#eTable').bootstrapTable('remove', {
+            field: 'id',
+            values: ids
+        });
+        num1 = num1-ids.length;
+        $("#count").text(num1)
+        });
+        
+        
+    })
+    
+    
+    
+
+    $("#eTable").on('click-row.bs.table', function (e, row, element) {
+    	console.log(element)
+    	$(".success").removeClass('success')
+    	$(element).addClass('success')
+    })
+
+    // $("#btn_trash").click(function(event) {
+    //         var ids = $.map($('#eTable').bootstrapTable('getSelections'), function (row) {
+    //             return row.id;
+    //         });
+    //         $('#eTable').bootstrapTable('remove', {
+    //             field: 'id',
+    //             values: ids
+    //         });
+    //         console.log($('#eTable').bootstrapTable('getOptions'))
+    //     });
+    $("#btn_add").on("click",function(){
+        $("#myModal").modal("show")
+        $(".form-control").each(function(){
+            $(this).val("")
+        })
+    })
+    $("#btn1").on("click",function() {
+        alert("设置成功！")
+    });
+
+    $(".modal").on("click",".btn-primary",function(){
+        
+        $("#myModal").modal('hide')
+        var userimg = "<img src = './img/"+$('#modal-userimg').get(0).files[0].name+"' width = '50'>";
+        var id = $('#modal-id').val();
+        var name = $('#modal-name').val();
+        var pwd=$("#modal-pwd").val()
+        var sex=$("#modal-sex").val()
+        var tel=$("#modal-tel").val()
+        var addr=$("#modal-addr").val()
+        var row = $("#myModal").data('row') //get
+        console.log(row)
+        if (row === undefined) {
+            $('#eTable').bootstrapTable('prepend', [{
+                userimg: userimg,
+                id: id,
+                name: name,
+                pwd: pwd,
+                sex: sex,
+                tel: tel,
+                addr: addr
+            }]);
+        } else {
+            console.log(userimg, id, name, pwd, sex, tel, addr, row.id)
+            var index = $('#eTable').find('tr.success').data('index');
+            $('#eTable').bootstrapTable('updateRow', {
+                index: index,
+                row: {
+                    userimg: userimg,
+                    id: id,
+                    name: name,
+                    pwd: pwd,
+                    sex: sex,
+                    tel: tel,
+                    addr: addr
+                }
+            });
+            $("#myModal").removeData('row')
+        }
+    })
+})
+    window.operateEvents = {
+            'click .edit' : function(e, value, row){
+                $("#myModal").modal("show")
+                // $("#modal-userimg").val(row.userimg)
+                $("#modal-id").val(row.id)
+                $("#modal-name").val(row.name)
+                $("#modal-pwd").val(row.pwd)
+                $("#modal-sex").val(row.sex)
+                $("#modal-tel").val(row.tel)
+                $("#modal-addr").val(row.addr)
+            },
+            'click .remove' : function(e, value, row){
+
+                console.log(row)
+                var ids = [row.id]
+                $('#eTable').bootstrapTable('remove', {
+                    field: 'id',
+                    values: ids
+                });
+                $("#count").text(--num1)
+            }
+    };
+
+    function operateFormatter(value, row, index){
+    	return [
+    	'<button class="btn btn-warning edit">编辑</button>',
+    	'<button class="btn btn-primary remove">删除</button>'
+    	].join('')
+    }
+    
+    $(".controls input").eq(0).click(function() {
+        $("#sel2").append($("#sel1 option"))
+        changeA($("#sel2"),$("#sel1"))
+    });
+    $(".controls input").eq(1).click(function() {
+        $("#sel1").append($("#sel2 option"))
+        changeA($("#sel1"),$("#sel2"))
+    });
+    $(".controls input").eq(2).click(function() {
+        changeA($("#sel2"),$("#sel1"))
+    });
+    $(".controls input").eq(3).click(function() {
+        changeA($("#sel1"),$("#sel2"))
+    });
+    function changeA(a, b){
+        a.append(b.find('option:selected'))
+        a.find('option:selected').attr({
+            "selected": false
+        });
+        var aaa = Array.from(a.children().sort(function(a,b){
+            return a.value - b.value
+        }))
+        a.children().remove();
+        $.each(aaa, function(index, val) {
+             a.append(val)
+        });
+    }
+    </script>
+</body>
+
+</html>

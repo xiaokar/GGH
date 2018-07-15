@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品管理</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+  @media (min-width: 768px) {
+    .table-responsive>.table-bordered{
+        border: 0;
+    }
+    .table-responsive>.table-bordered>tbody>tr:last-child>td{
+        border-bottom: 0; 
+    }
+}
+@media (max-width: 768px) {
+    .btn{font-size: 10px;}
+    
+}
+.panel-warning{
+    border-color:  rgb(255,103,0);
+}
+.panel-warning>.panel-heading{
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgb(255,103,0);
+    color:#fff;
+   
+}
+.sear{
+    margin-bottom: 20px;
+}
+.search{
+    margin-right: 10px;
+    margin-top: -2px;
+}
+    .table{
+        margin-bottom: 0;
+    }
+    .my-table-tool {
+        margin-bottom: 30px
+    }
+    /*
+    .table.table-striped {
+        display: none;
+    }*/
+
+    .table.table-striped thead tr th{
+        text-align: center;
+        font-family: "微软雅黑";
+    }
+    .table.table-striped tbody tr td{
+        text-align: center;
+    }
+
+
+    .table-responsive table tbody tr td {
+        position: relative;
+        line-height: 35px;
+    }
+
+    .table-responsive table tbody tr td .min {
+        width: 40px;
+        height: 25px;
+    }
+
+    .table-responsive table tbody tr td .max{
+        width: 120px;
+        height: 75px;
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 main">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">商品管理</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row my-table-tool">
+                            <div class="col-md-12 sear">
+                                <div style="float:left" class="search">
+                                    <input type="text" class="form-control" placeholder="搜索">
+                                </div>
+                                <button type="submit" class="btn btn-primary">查找</button>
+                                <button type="button" class="btn pull-right btn-info" data-toggle="modal" href='#myModal'>添加</button>
+                            </div>
+                        </div>
+                        <div class="table-responsive table-bordered">
+                            <table class="table table-hover table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>商品序号</th>
+                                        <th>商品图片</th>
+                                        <th>商品名称</th>
+                                        <th>商品价格</th>
+                                        <th>商品简介</th>
+                                        <th>成本价</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr><td>1</td><td><img class="min" src="img/mix2.png"><img class="max" src="img/mix2.png"></td><td>小米mix2</td><td sytle="color: red">￥2599</td><td>1599</td><td>1000</td><td>
+                                                <button class="btn btn-warning">编辑</button>
+                                                <button class="btn btn-danger">删除</button>
+                                            </td></tr>
+                                    <!-- <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>
+                                            <button class="btn btn-warning">编辑</button>
+                                            <button class="btn btn-danger">删除</button>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">编辑内容</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST" class="form-horizontal" role="form">
+                        <!-- <div class="form-group">
+                            <label for="modal-name" class="col-sm-2 control-label">商品编号</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-num" placeholder="请输入商品编号">
+                            </div>
+                        </div> -->
+                        <div class="form-group">
+                            <label for="modal-url" class="col-sm-2 control-label">商品图片</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-src" placeholder="请输入图片路径">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-weight" class="col-sm-2 control-label">商品名称</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-name" placeholder="请输入商品名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-weight" class="col-sm-2 control-label">商品价格</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="modal-price" placeholder="请输入商品价格">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-weight" class="col-sm-2 control-label">商品成本</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-chengben" placeholder="请输入商品成本价">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-weight" class="col-sm-2 control-label">商品库存</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="modal-remain" placeholder="请输入商品库存">
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <!--  <img src="img/box/box3c.png" alt=""> -->
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $('.min').on("click",function() {
+        alert(1);
+        $('.max').show();
+    });
+
+    $(document).ready(function() {
+        $('tbody').on('click', 'td>.btn-danger', function() {
+            $(this).parent().parent().remove();
+            console.log( $('tbody').children().length)
+            if( $('tbody').children().length !== 0){
+            	$('tbody').children().each(function(index, el) {
+            		console.log(index,el)
+            		$(el).children().eq(0).text(index+1)
+            	});
+            }
+            // else{
+            //     $('tbody').parent().hide();
+            // }
+        })
+        $('tbody').on('click', 'td>.btn-warning', function() {
+            $('#myModal').modal('show');
+            var tds = $(this).parent().parent().children();
+            console.log(tds)
+            var num = tds.eq(0).text();
+            var src = tds.eq(1).text();
+            var name = tds.eq(2).text();
+            var price = tds.eq(3).text();
+            var chengben = tds.eq(4).text();
+            var remain = tds.eq(5).text();
+            $('#modal-num').val(num)
+            $('#modal-src').val(src)
+            $('#modal-name').val(name)
+            $('#modal-price').val(price);
+            $('#modal-chengben').val(chengben);
+            $('#modal-remain').val(remain)
+            $('#myModal').data({ 'tds': tds }) //数据存储
+        });
+
+        $('.modal-footer>.btn-primary').click(function() {
+            $("#myModal").modal('hide')
+            var name = $('#modal-name').val();
+            var src = $('#modal-src').val();
+            var price = $('#modal-price').val();
+            var chengben = $('#modal-chengben').val();
+            var remain = $('#modal-remain').val();
+            var tds = $("#myModal").data('tds') //get
+            console.log(tds)
+
+            if (tds === undefined) {
+                var trCreate = document.createElement("tr");
+                $(trCreate).append('<td>' + ($('tbody tr').length + 1) + '</td>');
+                $(trCreate).append("<td><img class='min' src='img/" + src +".png' /><img class='max' src='img/" + src +".png' /></td>");
+                $(trCreate).append('<td>' + name + '</td>');
+                $(trCreate).append("<td sytle='color: red'>￥" + price + "</td>");
+                $(trCreate).append('<td>' + chengben + '</td>');
+                $(trCreate).append('<td>' + remain + '</td>');
+                $(trCreate).append(`<td>
+                                        <button class="btn btn-warning">编辑</button>
+                                        <button class="btn btn-danger">删除</button>
+                                    </td>`);
+                $('tbody').append(trCreate)
+
+            } else {
+                
+                tds.eq(1).html("<img class='min' src='img/" + src +".png' /><img class='max' src='img/" + src +".png' />");
+                tds.eq(2).text(name)
+                tds.eq(3).text("￥"+price)
+                tds.eq(4).text(chengben)
+                tds.eq(5).text(remain)
+                $("#myModal").removeData('tds')
+            }
+        });
+
+        $('.my-table-tool .btn-danger').click(function() {
+        	$('#myModal :input').val('')
+        });
+
+    });
+    </script>
+</body>
+
+</html>

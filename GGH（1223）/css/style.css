@@ -1,0 +1,98 @@
+
+@media (min-width: 768px) {
+    .sidebar {position: absolute;width: 160px;z-index: 2;}
+    .ali{text-align: center;}
+    .contain_J{margin-left: 160px;}
+}
+@media (max-width: 768px) {
+    .navbar-collapse{padding:0;text-align: center;} 
+    .sidebar {position: absolute;width: 100px;z-index: 2;}
+    .main{display: none;}
+    .contain_J{margin-left: 100px;}
+}
+/* .container-fluid{
+    position: relative;
+}
+.navbar-nav{
+    position: absolute;
+    right: 20px;
+} */
+/* .nav>li{
+    display: inline-block;
+} */
+
+
+.nav>li>a{
+    padding:12px 15px;
+    font-size: 12px;
+}
+
+.fa{
+    font-size: 20px;
+    color:rgb(255,103,0);
+}
+
+.fa-chevron-down {
+	font-size: 12px;
+}
+
+span.fa{
+	font-family: "微软雅黑";
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.ali{
+    color:#3fa4cd;
+}
+.arrow{
+    width: 5px;
+    height: 13px;
+}
+.hr hr{
+    border: none;
+    height: 2px;
+    background-color: rgb(255,103,0);
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.sidebar ul li .ali:hover{
+    background-color: rgb(255,103,0);
+    color:#fff;
+}
+.navbar-collapse{
+    padding: 0;
+}
+.sidebar {margin-top: 0px;}
+.sidebar .sidebar-search {padding: 15px;}
+.sidebar ul li a.active {background-color: #000;}
+.sidebar ul li {background: #f8f8f8;}
+/* nav */
+.navbar{
+    padding: 0 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+.navbar .bg{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background:url(.././img/xmi.png) no-repeat 0 0 #f8f8f8;;
+    background-size:40px 40px;
+    margin-top:5px;
+    margin-left: 20px;
+}
+.nav-second-level li {border-bottom: 0 !important;}
+/* containj */
+.contain_J{
+    overflow: auto;
+}
+#J_iframe{
+    height: 100%;
+}
+.col-md-12{
+    padding-left: 0px;
+    padding-right: 0px;
+}

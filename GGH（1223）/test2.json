@@ -1,0 +1,121 @@
+// [{
+//    "goods":"小米mix",
+//    "com":"<dl><dt><img src='img/huajired.jpg'/><p>滑稽1</p></dt><dd><p id='text'>质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+// },
+// {
+//     "goods":"小米note",
+//     "com":"<dl><dt><img src='img/huajired.jpg'/><p>滑稽</p></dt><dd><p id='text'>物流公司的态度比较差,建议换一家!不过掌柜人还不错!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+
+//  },
+//  {
+//     "goods":"小米6",
+//     "com":"<dl><dt><img src='img/huajired.jpg'/><p>滑稽</p></dt><dd><p id='text'> 宝贝质量不错，很喜欢了。谢谢掌柜。 </p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+
+//  },
+//  {
+//     "goods":"小米5x",
+//     "com":"<dl><dt><img src='img/huajired.jpg'/><p>滑稽</p></dt><dd><p id='text'> 买来这个是送人的,她很喜欢.卖家的贴心让我感到很温暖.以后我还会来选的 </p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+
+//  },
+//  {
+//     "goods":"小米4c",
+//     "com":"<dl><dt><img src='img/huajired.jpg'/><p>滑稽1</p></dt><dd><p id='text'> 东西收到,很满意!!真的是超级好的卖家,解答疑问不厌其烦,关键是东西好,而且包装仔细,值得信赖! </p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+
+//  },
+//  {
+//     "goods":"小米mix2",
+//     "com":"<dl><dt><img src='img/huajired.jpg'/><p>滑稽1</p></dt><dd><p id='text'>质量非常好,真出乎我的意料,包装非常仔细,非常感谢 ,祝生意兴隆!</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+
+//  },
+//  {
+//     "goods":"红米5",
+//     "com": "<dl><dt><img src='img/huajired.jpg'/><p>滑稽1</p></dt><dd><p id='text'>加油加油。生意欣荣</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+
+//  },
+//  {
+//     "goods":"红米5plus",
+//     "com":"<dl><dt><img src='img/huajired.jpg'/><p>滑稽1</p></dt><dd><p id='text'> 蛮喜欢的 还有赠品 卖家人真不错！ </p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽2</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽3</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+
+//  },
+//  {
+//     "goods":"小米5s",
+//     "com":"<dl><dt><img src='img/huajired.jpg'/><p>滑稽</p></dt><dd><p id='text'> 买来这个是送人的,她很喜欢.卖家的贴心让我感到很温暖.以后我还会来选的 </p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+//  },
+//  {
+//     "goods":"红米note4x",
+//     "com":"<dl><dt><img src='img/huajired.jpg'/><p>滑稽</p></dt><dd><p id='text'> 买来这个是送人的,她很喜欢.卖家的贴心让我感到很温暖.以后我还会来选的 </p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/keai.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl><dl><dt><img src='img/huaji.jpg'/><p>滑稽</p></dt><dd><p id='text'>宝贝质量不错，很喜欢了。谢谢掌柜。</p><span id='time'>2017-1-1</span></dd><button class='btn btn-danger delect'>删除</button></dl>"
+//  }
+
+// ]
+
+  
+//   "goods": {
+//     "00": [["317", "北京市"]],
+//     "01": [["014", "重庆市"]],
+//     "02": [
+//       ["015", "漳州市"],
+//       ["016", "厦门市"],
+//       ["017", "三明市"],
+//       ["018", "泉州市"],
+//       ["019", "莆田市"],
+//       ["020", "宁德市"],
+//       ["021", "南平市"],
+//       ["022", "龙岩市"],
+//       ["023", "福州市"]
+//     ],
+//     "03": [
+//       ["024", "镇江市"],
+//       ["025", "张家港市"],
+//       ["026", "扬州市"],
+//       ["027", "盐城市"],
+//       ["028", "徐州市"],
+//       ["029", "宿迁市"],
+//       ["030", "无锡市"],
+//       ["031", "泰州市"],
+//       ["032", "苏州市"],
+//       ["033", "南通市"],
+//       ["034", "南京市"],
+//       ["035", "连云港市"],
+//       ["036", "淮安市"],
+//       ["037", "常州市"]
+//     ],
+//     "04": [
+//       ["038", "珠海市"],
+//       ["039", "中山市"],
+//       ["040", "肇庆市"],
+//       ["041", "湛江市"],
+//       ["042", "云浮市"],
+//       ["043", "阳江市"],
+//       ["044", "深圳市"],
+//       ["045", "韶关市"],
+//       ["046", "汕尾市"],
+//       ["047", "汕头市"],
+//       ["048", "清远市"],
+//       ["049", "梅州市"],
+//       ["050", "茂名市"],
+//       ["051", "揭阳市"],
+//       ["052", "江门市"],
+//       ["053", "惠州市"],
+//       ["054", "河源市"],
+//       ["055", "广州市"],
+//       ["056", "佛山市"],
+//       ["057", "东莞市"],
+//       ["058", "潮州市"]
+//     ],
+//     "05": [
+//       ["059", "营口市"],
+//       ["060", "铁岭市"],
+//       ["061", "沈阳市"],
+//       ["062", "盘锦市"],
+//       ["063", "辽阳市"],
+//       ["064", "锦州市"],
+//       ["065", "葫芦岛市"],
+//       ["066", "阜新市"],
+//       ["067", "抚顺市"],
+//       ["068", "丹东市"],
+//       ["069", "大连市"],
+//       ["070", "朝阳市"],
+//       ["071", "本溪市"],
+//       ["072", "鞍山市"]
+//     ]
+   
